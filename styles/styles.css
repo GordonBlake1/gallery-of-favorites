@@ -1,0 +1,426 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  background-color: #14181d;
+  text-align: center;
+}
+
+.backdrop-container {
+  height: 675px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.backdrop-wrapper {
+  height: 675px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1200px;
+  z-index: 0;
+}
+
+.backdrop-wrapper > .backdropimage {
+  opacity: 0.4;
+  transition: opacity 0.75s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.backdrop-wrapper > .backdropimage,
+.backdrop-wrapper > .backdropplaceholder {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 99.95%;
+  position: absolute;
+  width: 100%;
+}
+
+.backdrop-wrapper > .backdropmask {
+  padding-top: 500px;
+  position: relative;
+}
+
+.backdrop-wrapper > .backdropmask::before {
+  background-image: linear-gradient(
+      90deg,
+      #14181d 0,
+      rgba(20, 24, 29, 0.986) 0.97%,
+      rgba(20, 24, 29, 0.945) 2.07833333%,
+      rgba(20, 24, 29, 0.883) 3.29666667%,
+      rgba(20, 24, 29, 0.803) 4.60166667%,
+      rgba(20, 24, 29, 0.711) 5.96666667%,
+      rgba(20, 24, 29, 0.61) 7.365%,
+      rgba(20, 24, 29, 0.504) 8.77166667%,
+      rgba(20, 24, 29, 0.398) 10.16%,
+      rgba(20, 24, 29, 0.296) 11.505%,
+      rgba(20, 24, 29, 0.203) 12.78%,
+      rgba(20, 24, 29, 0.122) 13.95833333%,
+      rgba(20, 24, 29, 0.059) 15.01666667%,
+      rgba(20, 24, 29, 0.016) 15.92833333%,
+      rgba(20, 24, 29, 0) 16.66666667%,
+      rgba(20, 24, 29, 0) 83.33333333%,
+      rgba(20, 24, 29, 0.016) 84.07166667%,
+      rgba(20, 24, 29, 0.059) 84.98333333%,
+      rgba(20, 24, 29, 0.122) 86.04166667%,
+      rgba(20, 24, 29, 0.203) 87.22%,
+      rgba(20, 24, 29, 0.296) 88.495%,
+      rgba(20, 24, 29, 0.398) 89.84%,
+      rgba(20, 24, 29, 0.504) 91.22833333%,
+      rgba(20, 24, 29, 0.61) 92.635%,
+      rgba(20, 24, 29, 0.711) 94.03333333%,
+      rgba(20, 24, 29, 0.803) 95.39833333%,
+      rgba(20, 24, 29, 0.883) 96.70333333%,
+      rgba(20, 24, 29, 0.945) 97.92166667%,
+      rgba(20, 24, 29, 0.986) 99.03%,
+      #14181d
+    ),
+    linear-gradient(
+      0deg,
+      #14181d 0,
+      #14181d 21.48148148%,
+      rgba(20, 24, 29, 0.986) 23.63703704%,
+      rgba(20, 24, 29, 0.945) 26.1%,
+      rgba(20, 24, 29, 0.883) 28.80740741%,
+      rgba(20, 24, 29, 0.803) 31.70740741%,
+      rgba(20, 24, 29, 0.711) 34.74074074%,
+      rgba(20, 24, 29, 0.61) 37.84814815%,
+      rgba(20, 24, 29, 0.504) 40.97407407%,
+      rgba(20, 24, 29, 0.398) 44.05925926%,
+      rgba(20, 24, 29, 0.296) 47.04814815%,
+      rgba(20, 24, 29, 0.203) 49.88148148%,
+      rgba(20, 24, 29, 0.122) 52.5%,
+      rgba(20, 24, 29, 0.059) 54.85185185%,
+      rgba(20, 24, 29, 0.016) 56.87777778%,
+      rgba(20, 24, 29, 0) 58.51851852%
+    );
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 675px;
+  left: 50%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1200px;
+  z-index: 0;
+}
+
+.backdrop-wrapper > .backdropimage {
+  transition: opacity 0.75s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0.7;
+}
+
+.backdropimage {
+  background-position: center -31px;
+  background-repeat: no-repeat;
+}
+
+.header {
+  position: relative;
+  top: 550px;
+}
+
+.header-title {
+  color: #ff7fb5;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 12px;
+  text-shadow: 2px 2px 4px #9d6bb8;
+  cursor: pointer;
+}
+
+.second-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  top: 600px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+button {
+  color: #f9c7d5;
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  bottom: -1px;
+  right: -1px;
+  border-radius: 50px;
+  border-bottom: 2px solid gold;
+  border-right: 2px solid gold;
+  transition: all 0.35s;
+  z-index: -1;
+}
+
+button:hover::after {
+  height: 100%;
+  width: 100%;
+}
+
+#content {
+  width: 1000px;
+  padding-top: 700px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 1.75rem;
+  color: #c7c4c4;
+  margin-bottom: 300px;
+}
+
+#content-1920 {
+  width: 1000px;
+  padding-top: 650px;
+  margin: 0 auto;
+  font-size: 1.75rem;
+  color: #c7c4c4;
+  margin-bottom: 300px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro img {
+  width: 1000px;
+}
+.intro p {
+  text-align: center;
+  color: #50c878;
+  font-size: 4rem;
+  margin-top: 0.5em;
+}
+
+.current-page,
+.current-page:visited,
+.current-page:hover,
+.current-page:active {
+  color: antiquewhite;
+}
+
+.movie-year {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 2.5rem;
+  color: #ff70a9;
+}
+
+.movie-title {
+  font-size: 1.4rem;
+  padding: 5px 0px;
+}
+
+.dir-by {
+  font-size: 1rem;
+}
+
+.movie-director {
+  font-size: 1.2rem;
+}
+
+.year-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fffdf9, #fff8f0, #fff3e6);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 0 10px 4px rgba(255, 193, 37, 0.5);
+}
+
+#footer {
+  background-color: #2c3440;
+}
+
+.footer-links {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.1rem;
+  color: #c7c4c4;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  letter-spacing: 1.5rem;
+  align-items: center;
+  gap: 4rem;
+}
+.footer-links li {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.footer-links li:hover {
+  color: gold;
+  transform: scale(1.5);
+}
+
+.footer-copyright {
+  font-size: 0.92307692rem;
+  color: #678;
+  padding-bottom: 1em;
+}
+
+/* Mobile devices (portrait) */
+@media only screen and (max-width: 480px) {
+  .header {
+    position: relative;
+    top: 500px;
+  }
+  .header-title {
+    color: #ff7fb5;
+    letter-spacing: 12px;
+    text-shadow: 2px 2px 4px #9d6bb8;
+    border-top: 1px solid gold;
+    padding-top: 10px;
+    border-radius: 30px;
+    border-bottom: 1px solid gold;
+    padding-bottom: 10px;
+  }
+  .second-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 530px;
+  }
+  .backdropimage {
+    display: none;
+  }
+  .header-wrapper {
+    background-image: url("../public/images/the-goat-keaton.jpg");
+    background-position: center -31px;
+    background-repeat: no-repeat;
+  }
+  button {
+    padding: 4px 10px;
+    font-size: 1.5rem;
+    letter-spacing: 0.7rem;
+    border-bottom: 1px solid gold;
+  }
+  #content {
+    width: 90vw;
+    padding-top: 620px;
+  }
+  #content-1920 {
+    width: 90vw;
+    padding-top: 570px;
+  }
+  .movie-year {
+    text-align: center;
+  }
+  .intro {
+    padding: 0 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+}
+/* Mobile devices (landscape) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  #content {
+    width: 90vw;
+    padding-top: 650px;
+  }
+  #content-1920 {
+    width: 90vw;
+    padding-top: 620px;
+  }
+  .movie-year {
+    text-align: center;
+  }
+  .movie-title {
+    text-align: center;
+  }
+  .intro {
+    padding: 0 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  button {
+    padding: 4px 5px;
+    font-size: 1.5rem;
+    letter-spacing: 0.7rem;
+  }
+  .second-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 600px;
+  }
+}
+/* Tablets (portrait) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #content {
+    width: 90vw;
+    padding-top: 650px;
+  }
+  #content-1920 {
+    width: 90vw;
+    padding-top: 570px;
+  }
+  .movie-year {
+    text-align: center;
+  }
+  .movie-title {
+    text-align: center;
+  }
+  button {
+    padding: 4px 5px;
+    font-size: 1.5rem;
+    letter-spacing: 2.25vw;
+  }
+  .second-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 600px;
+  }
+}
+/* Tablets (landscape) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* Styles for tablets in landscape mode */
+}
+/* Laptops and desktops */ /*# sourceMappingURL=styles.css.map */

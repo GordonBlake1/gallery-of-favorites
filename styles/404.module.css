@@ -1,0 +1,21 @@
+.container {
+  background-image: url("/pics/the-matrix.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  font-family: Courier, monospace;
+  letter-spacing: 1.2rem;
+  line-height: 7rem;
+  color: white;
+  font-size: 6rem;
+  margin-bottom: 4rem;
+}

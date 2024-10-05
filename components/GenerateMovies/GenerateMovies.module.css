@@ -1,0 +1,61 @@
+.movieYear {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-top: 2.5rem;
+  color: #ff70a9;
+}
+
+.movieTitle {
+  font-size: 1.4rem;
+  padding: 5px 0px;
+}
+
+.dirBy {
+  font-size: 1rem;
+}
+
+.movieDirector {
+  font-size: 1.2rem;
+}
+
+.yearCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #fffdf9, #fff8f0, #fff3e6);
+  border-radius: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: 0 0 10px 4px rgba(255, 193, 37, 0.5);
+}
+
+/* Mobile devices (portrait) */
+@media only screen and (max-width: 480px) {
+  .movieYear {
+    text-align: center;
+  }
+}
+
+/* Mobile devices (landscape) */
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .movieYear {
+    text-align: center;
+  }
+
+  .movieTitle {
+    text-align: center;
+  }
+}
+
+/* Tablets (portrait) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .movieYear {
+    text-align: center;
+  }
+
+  .movieTitle {
+    text-align: center;
+  }
+}

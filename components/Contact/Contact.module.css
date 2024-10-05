@@ -1,0 +1,127 @@
+.sendRecs {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.contactMeWrapper {
+  padding-top: 12rem;
+  padding-bottom: 1rem;
+}
+
+.sendTitle {
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 1.25rem;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.5);
+}
+
+.imgWrapper img {
+  width: 1060px;
+  z-index: 1;
+}
+
+.fancyForm {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.hugeError {
+  margin-top: 0.75rem;
+  color: red;
+}
+
+.name {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: 600;
+  background-color: #c7c4c4;
+}
+
+.fancyForm input,
+.fancyForm textarea {
+  border: none;
+  border-radius: 1rem;
+  color: #623aa2;
+  font-size: 1rem;
+}
+
+.fancyForm input::placeholder,
+.fancyForm textarea::placeholder {
+  color: darkblue;
+}
+
+.email {
+  width: 100%;
+  font-weight: 600;
+  padding: 0.75rem;
+  margin-top: 1.25rem;
+  background-color: #c7c4c4;
+}
+
+.bigMessage {
+  width: 100%;
+  font-weight: 700;
+  padding: 0.75rem;
+  margin-top: 1.25rem;
+  background-color: #c7c4c4;
+}
+
+.btnWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sendBtn {
+  padding: 1.25rem;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  color: beige;
+  background-color: #ff7fb5;
+  margin-top: 1.25rem;
+  transition-duration: 500ms;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  color: white;
+  background-color: #623aa2;
+}
+
+@media only screen and (max-width: 480px) {
+  .formWrapper {
+    display: flex;
+    justify-content: center;
+    max-width: 400px;
+  }
+
+  .fancyForm {
+    margin-top: 0px;
+  }
+
+  .imgWrapper img {
+    width: 80vw;
+  }
+
+  .sendTitle {
+    max-width: 90vw;
+    text-align: center;
+    font-size: 28px;
+  }
+}
